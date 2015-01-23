@@ -1,0 +1,11 @@
+# Site navigation links
+
+- title: Home
+  url: /
+
+- title: Sobre Mim
+  url: /about/
+
+- title: Posts
+  url: /posts/
+
