@@ -28,6 +28,7 @@ body {
 body {
 	font-family: $base-font;
 	color: $text-color;
+	font-weight: 300;
 	@include font-size(16);
 }
 
