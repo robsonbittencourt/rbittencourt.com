@@ -9,13 +9,13 @@ Meu objetivo inicial ao criar este blog era compartilhar alguns assuntos que eu 
 
 O que isso significa? Que qualquer pessoa que tiver interesse pode escrever um post aqui sobre algum assunto relacionado com desenvolvimento de software.
 
-Além disso se você encontrar um erro em algum texto, clique no botão "Edite este post" na barra a esquerda, que redireciona para o Github onde é possível fazer a correção.
+Além disso se você encontrar um erro em algum texto, clique no botão **Edite este post** na barra a esquerda, que redireciona para o Github onde é possível fazer a correção.
 
 ##Mas não sei sobre o que escrever
 
 Os assuntos não precisam ser diretamente relacionados à software em si. Você manda bem em design ou técnicas gerenciais? Pode escrever sobre isso. Com certeza existe algo que você saiba e que possa compartilhar.
 
-Você pode dar uma olhada nesse repositório, onde uma galera está com uma iniciativa muito legal de fazer um post por dia utilizando a hashtag #1postperday. Lá são sugeridos assuntos, e quem quiser escolhe um para escrever um post.
+Você pode dar uma olhada [nesse repositório](https://github.com/LFeh/poste-mais), onde uma galera está com uma iniciativa muito legal de fazer um post por dia utilizando a hashtag **#1postperday**. Lá são sugeridos assuntos, e quem quiser escolhe um para escrever um post.
 
 
 ##Ahh mas isso que eu sei é muito simples, todo mundo sabe
