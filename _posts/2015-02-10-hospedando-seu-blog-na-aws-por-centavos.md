@@ -18,7 +18,7 @@ O processo pode ser dividido em 3 partes: criação, versionamento, e hospedagem
 
 ##Criação 
 
-Para criação do blog utilizei o gerador de sites estáticos [Jekyll](http://jekyllrb.com/). O Jekyll é uma ferramenta que facilita a construção de sites estáticos como por exemplo blog. Seu objetivo é fazer com que o usuário se preocupe quase que exclusivamente com o exto, uma vez que ele já tenha criado seu template.
+Para criação do blog utilizei o gerador de sites estáticos [Jekyll](http://jekyllrb.com/). O Jekyll é uma ferramenta que facilita a construção de sites estáticos como por exemplo blog. Seu objetivo é fazer com que o usuário se preocupe quase que exclusivamente com o texto, uma vez que ele já tenha criado seu template.
 
 O Willian Justen escreveu um [ótimo post](http://willianjusten.com.br/perguntas-e-respostas-jekyll/) demonstrando desde a instalação até a criação das páginas utilizando Jekyll.
 
