@@ -7,7 +7,7 @@ excerpt:
 tags: []
 image:
   feature:
-date: 2015-02-10T23:03:19-02:00
+date: 2015-02-12T09:00:00-02:00
 ---
 
 #O primeiro post
@@ -18,17 +18,15 @@ O processo pode ser dividido em 3 partes: criação, versionamento, e hospedagem
 
 ##Criação 
 
-Para criação do blog utilizei o gerador de sites estáticos [Jekyll](http://jekyllrb.com/).
+Para criação do blog utilizei o gerador de sites estáticos [Jekyll](http://jekyllrb.com/). O Jekyll é uma ferramenta que facilita a construção de sites estáticos como por exemplo blog. Seu objetivo é fazer com que o usuário se preocupe quase que exclusivamente com o exto, uma vez que ele já tenha criado seu template.
 
 O Willian Justen escreveu um [ótimo post](http://willianjusten.com.br/perguntas-e-respostas-jekyll/) demonstrando desde a instalação até a criação das páginas utilizando Jekyll.
-
 
 ##Versionamento 
 
 É muito importante que tenhamos um controle sobre as modificações do blog. Para isso utilizei Git + Github para fazer o versionamento dos arquivos. Além disso utilizar o Github possibilita que outras pessoas possam contribuir com o blog.
 
 O Fernando Daciuk tem [diversos posts](http://blog.da2k.com.br/2014/01/19/manter-repositorio-github-forkado-sincronizado-com-o-original/) sobre Git e Github no seu blog. 
-
 
 ##Hospedagem
 
