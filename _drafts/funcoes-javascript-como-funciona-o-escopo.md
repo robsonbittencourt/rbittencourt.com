@@ -42,24 +42,24 @@ As seguintes regras são utilizadas para determinar o escopo:
 
 - Funções nomeadas fazem parte do escopo dentro de toda função onde são declaradas, independente do aninhamento dos blocos.
 
-Abaixo podemos verificar estes comportamentos com alguns exemplos:
+Abaixo podemos verificar estes comportamentos com alguns exemplos. Execute os códigos abaixo e verifique as saídas.
 
 ###Escopo de Variáveis
 
 {% highlight javaScript %}
 function escopoDeVariaveis() {
   if(typeof dia === 'number') {
-    console.log("ANTES da declaração a variável dia ESTÁ no escopo.");
+    console.log("ANTES da declaração, a variável dia ESTÁ no escopo.");
   } else {
-    console.log("ANTES da declaração a variável dia NÃO ESTÁ no escopo.");
+    console.log("ANTES da declaração, a variável dia NÃO ESTÁ no escopo.");
   }
 
   var dia = 1;
 
   if(typeof dia === 'number') {
-    console.log("DEPOIS da declaração a variável dia ESTÁ no escopo.");
+    console.log("APÓS a declaração, a variável dia ESTÁ no escopo.");
   } else {
-    console.log("DEPOIS da declaração a variável dia NÃO ESTÁ no escopo.");
+    console.log("APÓS a declaração, a variável dia NÃO ESTÁ no escopo.");
   }		  
   
 }
@@ -73,21 +73,81 @@ escopoDeVariaveis();
 {% highlight javaScript %}
 function escopoDeFuncoes() {
   if (typeof helloWorld === 'function') {
-    console.log("ANTES da declaração a função helloWorld ESTÁ no escopo.");
+    console.log("ANTES da declaração, a função helloWorld ESTÁ no escopo.");
   } else {
-    console.log("ANTES da declaração a função helloWorld NÃO ESTÁ no escopo.");
+    console.log("ANTES da declaração, a função helloWorld NÃO ESTÁ no escopo.");
   }
 
-  function helloWorld() {	console.log('Hello World'); }
+  function helloWorld() { console.log('Hello World'); }
 
   if (typeof helloWorld === 'function') {
-    console.log("DEPOIS da declaração a função helloWorld ESTÁ no escopo.");
+    console.log("APÓS a declaração, a função helloWorld ESTÁ no escopo.");
   } else {
-    console.log("DEPOIS da declaração a função helloWorld NÃO ESTÁ no escopo.");
+    console.log("APÓS a declaração, a função helloWorld NÃO ESTÁ no escopo.");
   }
 }
 
 escopoDeFuncoes();
+
+{% endhighlight %}
+
+###Global x Local
+Sempre que declaramos uma variável ou função fora de outra função, ela acaba pertencendo ao escopo global. Como seu nome sugere, tudo que pertence ao escopo global, é acessível em qualquer parte daquele código. 
+
+Porém quando criamos variáveis ou funções dentro de outra função, as regras mostradas anteriormente são obedecidas, e dizemos que o escopo é local.
+
+Quando existe um conflito de nomes entre variáveis globais e locais, o JavaScript irá a utilizar a de menor escopo por padrão.
+
+Observe o exemplo abaixo:
+
+{% highlight javaScript %}
+var a = 5
+
+function escopoDeVariaveis() {
+  var a = 10;
+  console.log(a);
+}
+
+escopoDeVariaveis();
+
+{% endhighlight %}
+
+Podemos que verificar que o valor impresso foi o 10, pois a variável a mais próxima deste escopo é a de valor 10.
+
+###Um pouco mais sobre escopo de variáveis
+
+Um comportamento que ainda devemos observar, é que o JavaScript coloca as declarações de variáveis sempre no topo das funções, independente de sua localização. Mas note que somente a declaração é colocada no topo. A atribuição do valor ocorre no ponto em que está localizada no código. Verifique o exemplo abaixo:
+
+{% highlight javaScript %}
+var a = 5
+
+function escopoDeVariaveis() {
+  console.log(a);
+  
+  var a = 10;
+  
+  console.log(a);
+}
+
+escopoDeVariaveis();
+
+{% endhighlight %}
+
+Como você pôde perceber o valor 5 não foi impresso. Isso acontece porque dentro do escopo da função a variável a existe desde o começo, apesar de não possuir valor. O código acima seria o equivalente a isso:
+
+{% highlight javaScript %}
+var a = 5
+
+function escopoDeVariaveis() {
+  var a;
+  console.log(a);
+  
+  a = 10;
+  
+  console.log(a);
+}
+
+escopoDeVariaveis();
 
 {% endhighlight %}
 
