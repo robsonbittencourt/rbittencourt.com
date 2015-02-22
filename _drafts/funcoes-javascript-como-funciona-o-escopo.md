@@ -10,6 +10,8 @@ image:
 date: 2015-02-17T16:53:21-02:00
 ---
 
+Link para o livro
+
 #Funções
 
 Estou lendo o livro Segredos do Ninja JavaScript e resolvi escrever um pouco sobre o tópico que estou estudando: funções. 
@@ -116,7 +118,9 @@ Podemos que verificar que o valor impresso foi o 10, pois a variável a mais pr�
 
 ###Um pouco mais sobre escopo de variáveis
 
-Um comportamento que ainda devemos observar, é que o JavaScript coloca as declarações de variáveis sempre no topo das funções, independente de sua localização. Mas note que somente a declaração é colocada no topo. A atribuição do valor ocorre no ponto em que está localizada no código. Verifique o exemplo abaixo:
+Um comportamento que ainda devemos observar, é que o JavaScript coloca as declarações de variáveis sempre no topo das funções, independente de sua localização.
+
+Mas note que somente a declaração é colocada no topo. A atribuição do valor ocorre no ponto em que está localizada no código. Verifique o exemplo abaixo:
 
 {% highlight javaScript %}
 var a = 5
@@ -133,7 +137,9 @@ escopoDeVariaveis();
 
 {% endhighlight %}
 
-Como você pôde perceber o valor 5 não foi impresso. Isso acontece porque dentro do escopo da função a variável a existe desde o começo, apesar de não possuir valor. O código acima seria o equivalente a isso:
+Como você pôde perceber o valor 5 não foi impresso. Isso acontece porque dentro do escopo da função a variável a existe desde o começo, apesar de não possuir valor.
+
+O código acima seria o equivalente a isso:
 
 {% highlight javaScript %}
 var a = 5
