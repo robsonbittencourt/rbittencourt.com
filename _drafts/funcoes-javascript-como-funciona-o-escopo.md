@@ -10,13 +10,10 @@ image:
 date: 2015-02-17T16:53:21-02:00
 ---
 
-Link para o livro
-
 #Funções
+Estou lendo o livro Segredos do [Ninja JavaScript](http://novatec.com.br/livros/ninja-javascript/), o qual recomendo fortemente a leitura, e resolvi escrever um pouco sobre o tópico que estou estudando: funções. 
 
-Estou lendo o livro Segredos do Ninja JavaScript e resolvi escrever um pouco sobre o tópico que estou estudando: funções. 
-
-Funções podem ser consideradas a base da linguagem JavaScript. Por ser uma linguagem de aspecto funcional, para fazermos o bom uso de seus recursos, é imprecindível que tenhamos um bom conhecimento sobre a mecânica por trás das funções. 
+Funções podem ser consideradas a base da linguagem JavaScript. Por ser uma linguagem de aspecto funcional, para fazermos o bom uso de seus recursos, é imprescindível que tenhamos um bom conhecimento sobre a mecânica por trás das funções. 
 
 #Escopo
 
@@ -36,13 +33,13 @@ Para quem está acostumado com linguagens que delimitam o escopo por blocos, com
 
 {% endhighlight %}
 
-Mas se fizermos este teste no browser poderemos verificar que o valor de saída será a string 'teste'. Como foi dito anteriormente, o JavaScript não delimita o escopo por blocos mas sim baseado na função. 
+Mas se fizermos este teste no browser poderemos verificar que o valor de saída será a string *teste*. Como foi dito anteriormente, o JavaScript não delimita o escopo por blocos mas sim baseado na função. 
 
 As seguintes regras são utilizadas para determinar o escopo:
 
-- Declarações de variáveis estão no escopo do ponto onde são declaradas até o final da função em que se encontram, independente do aninhamento dos blocos.
+- Declarações de variáveis estão no escopo do ponto onde são declaradas até o final da função em que se encontram, independente do alinhamento dos blocos.
 
-- Funções nomeadas fazem parte do escopo dentro de toda função onde são declaradas, independente do aninhamento dos blocos.
+- Funções nomeadas fazem parte do escopo dentro de toda função onde são declaradas, independente do alinhamento dos blocos.
 
 Abaixo podemos verificar estes comportamentos com alguns exemplos. Execute os códigos abaixo e verifique as saídas.
 
@@ -94,7 +91,7 @@ escopoDeFuncoes();
 {% endhighlight %}
 
 ###Global x Local
-Sempre que declaramos uma variável ou função fora de outra função, ela acaba pertencendo ao escopo global. Como seu nome sugere, tudo que pertence ao escopo global, é acessível em qualquer parte daquele código. 
+Sempre que declaramos uma variável ou função fora de uma função, ela acaba pertencendo ao escopo global. Como seu nome sugere, tudo que pertence ao escopo global, é acessível em qualquer parte daquele código. 
 
 Porém quando criamos variáveis ou funções dentro de outra função, as regras mostradas anteriormente são obedecidas, e dizemos que o escopo é local.
 
@@ -114,13 +111,13 @@ escopoDeVariaveis();
 
 {% endhighlight %}
 
-Podemos que verificar que o valor impresso foi o 10, pois a variável a mais próxima deste escopo é a de valor 10.
+Podemos verificar que o valor impresso foi o 10, pois a variável mais próxima deste escopo é a de valor 10.
 
 ###Um pouco mais sobre escopo de variáveis
 
-Um comportamento que ainda devemos observar, é que o JavaScript coloca as declarações de variáveis sempre no topo das funções, independente de sua localização.
+Um comportamento que ainda devemos observar, é que o JavaScript coloca as declarações de variáveis sempre no topo das funções, independentemente de sua localização.
 
-Mas note que somente a declaração é colocada no topo. A atribuição do valor ocorre no ponto em que está localizada no código. Verifique o exemplo abaixo:
+Mas note que somente a declaração é colocada no topo. A atribuição do valor ocorre no ponto em que está localizada no código.
 
 {% highlight javaScript %}
 var a = 5
@@ -137,7 +134,7 @@ escopoDeVariaveis();
 
 {% endhighlight %}
 
-Como você pôde perceber o valor 5 não foi impresso. Isso acontece porque dentro do escopo da função a variável a existe desde o começo, apesar de não possuir valor.
+Como você pôde perceber o valor 5 não foi impresso. Isso acontece porque dentro do escopo da função a variável _a_ existe desde o começo, apesar de não possuir valor.
 
 O código acima seria o equivalente a isso:
 
