@@ -52,25 +52,25 @@ O Simple Storage Service, mais conhecido por S3 é o serviço de armazenamento d
 No console principal, selecione o S3:
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/1.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/1.png" alt="console aws">
 </figure>
 
 Clique no botão *Create Bucket*. O bucket é o lugar onde irão ficar armazenados seus objetos no S3. Após, preencha o nome do bucket com o domínio do seu blog. Escolha a região US Standard pois é a mais barata e clique em *Create*.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/2.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/2.png" alt="Criando um bucket">
 </figure>
 
 Faça upload do conteúdo do seu blog dentro do bucket. Se você já leu o post sobre Jekyll faça upload do conteúdo da pasta _site.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/3.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/3.png" alt="Upload de arquivos no bucket">
 </figure>
 
 Selecione o bucket criado e vá na aba *Properties* e na opção *Permissions*. Clique no botão *Edit bucket policy*
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/4.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/4.png" alt="Permissões do bucket">
 </figure>
 
 Adicione o seguinte código:
@@ -95,13 +95,13 @@ Adicione o seguinte código:
 Agora no menu *Static Web Hosting* selecione a opção *Enable website hosting* e informe sua página inicial e a página de erro.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/5.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/5.png" alt="Ativando página estática no bucket">
 </figure>
 
 Ao ativar esta opção o S3 já lhe fornece uma URL para o seu bucket. Se você acessá-la já deverá visualizar a página inicial do seu blog.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/6.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/6.png" alt="URL Bucket S3">
 </figure>
 
 Mas não queremos está URL feia certo? Vamos trabalhar nisso então.
@@ -117,13 +117,13 @@ Assim se alguém acessar o seu blog do Brasil, os arquivos serão recuperados do
 O primeiro passo para termos estas vantagens em nosso blog é selecionar a opção CloudFront no console principal, clicar em *Create Distribution* e selecionar a opção Web. Em *Origin Domain Name* selecione o bucket criado no S3. As demais opções não precisam ser alteradas.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/7.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/7.png" alt="Criando distribuição no CloudFront">
 </figure>
 
 No campo *Alternate Domain Names* coloque o domínio do seu blog das duas formas que são mostradas na imagem. Também adicione o objeto raiz da sua distribuição, que será o mesmo que você selecionou no S3, nesse caso o index.html. As demais opções podem permanecer com os valores padrão.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/8.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/8.png" alt="Criando distribuição no CloudFront">
 </figure>
 
 Agora se irmos no menu lateral *Distributions* e selecionarmos a distribuição recém criada, poderemos verificar que ela tem um *Domain Name*. Essa url irá devolver também a página inicial do blog, mas agora utilizando o serviço CloudFront. Mas ainda temos uma URL pouco amigável. Chegou a hora de comprarmos nosso próprio domínio.
@@ -133,7 +133,7 @@ Agora se irmos no menu lateral *Distributions* e selecionarmos a distribuição 
 Agora que já temos nossos arquivos hospedados e sendo entregues da melhor forma possível, precisamos ter uma URL amigável para que nosso blog seja encontrado facilmente pelos leitores. O primeiro passo é adquirir um domínio, que será o endereço de seu blog na web. Selecione o Route53 no console principal, *Registered Domains*, *Register Domain*. Escolha o nome do seu domínio e a extensão final da URL. Domínios .com custam $12, mas não se assuste com esse valor ele é anual. 
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/9.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/9.png" alt="Registrando um domínio no Route53">
 </figure>
 
 Clicando no botão *check* o sistema irá verificar se o domínio escolhido está disponível. Se positivo clique em *continue* até finalizar a compra.
@@ -143,19 +143,19 @@ Agora que temos nosso domínio precisamos fazer as configurações de [DNS](http
 Ainda no Route53 clique na opção *Hosted Zones*, e depois em *Create Hosted Zone*. Em *Domain Name* coloque o endereço do seu blog e clique em *Create*.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/10.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/10.png" alt="Hosted Zone no Route53">
 </figure>
 
 Com a Hosted Zone selecionada clique em *Go to Record Sets*. Clique em *Create Record Set*. Marque a opção *Alias* como Yes, e selecione sua distribuição do CloudFront no campo *Alias Target*.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/11.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/11.png" alt="Records Sets no Route53">
 </figure>
 
 Faça o mesmo procedimento novamente, mas agora preenchendo o campo *Name* com www. Seus Records Sets devem estar parecidos com estes.
 
 <figure>
-	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/12.png" alt="image">
+	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/12.png" alt="Records Sets no Route53">
 </figure>
 
 ## Pronto
