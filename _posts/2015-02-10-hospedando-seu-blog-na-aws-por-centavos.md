@@ -10,26 +10,26 @@ image:
 date: 2015-02-12T09:00:00-02:00
 ---
 
-#O primeiro post
+###O Primeiro Post
 
 A ideia deste primeiro post é começar a demonstrar como montei este blog, para que possa servir como um tutorial para quem quiser começar o seu próprio.
 
 O processo pode ser dividido em 3 partes: criação, versionamento, e hospedagem. Creio que para os dois primeiros já existe bastante material, então resolvi escrever detalhadamente somente sobre a hospedagem que foi a parte que não encontrei muita coisa em português. 
 
-##Criação 
+###Criação 
 
 Para criação do blog utilizei o gerador de sites estáticos [Jekyll](http://jekyllrb.com/). O Jekyll é uma ferramenta que facilita a construção de sites estáticos como por exemplo blog. Seu objetivo é fazer com que o usuário se preocupe quase que exclusivamente com o texto, uma vez que ele já tenha criado seu template.
 
 O Willian Justen escreveu um [ótimo post](http://willianjusten.com.br/perguntas-e-respostas-jekyll/) demonstrando desde a instalação até a criação das páginas utilizando Jekyll.
 
-##Versionamento 
+###Versionamento 
 
 É muito importante que tenhamos um controle sobre as modificações do blog. Para isso utilizei Git + Github para fazer o versionamento dos arquivos. Além disso utilizar o Github possibilita que outras pessoas possam contribuir com o blog.
 
 O Fernando Daciuk tem [diversos posts](http://blog.da2k.com.br/2014/01/19/manter-repositorio-github-forkado-sincronizado-com-o-original/) sobre Git e Github no seu blog. 
 
 
-##Hospedagem
+###Hospedagem
 
 Para hospedagem vou demonstrar alguns serviços da AWS (Amazon Web Services). A AWS oferece uma enorme gama de serviços utilizando o paradigma de Cloud Computing. A principal característica destes serviços é o modelo pay-as-you-go, onde você só é cobrado pelo tempo que utilizar o serviço, sem contratos.
 
@@ -46,7 +46,7 @@ Os serviços que utilizei para hospedar o blog foram:
 [Route53](http://aws.amazon.com/pt/route53/) - Domínio e DNS
 
 
-## Armazenando seus arquivos no S3
+###Armazenando Seus Arquivos No S3
 O Simple Storage Service, mais conhecido por S3 é o serviço de armazenamento de arquivos da AWS. É aqui que vamos colocar o conteúdo do blog. Qualquer questão relativa a backup dos arquivos é providenciada pela AWS. Você só precisa se preocupar em fazer o upload dos arquivos. 
 
 No console principal, selecione o S3:
@@ -106,7 +106,7 @@ Ao ativar esta opção o S3 já lhe fornece uma URL para o seu bucket. Se você 
 
 Mas não queremos está URL feia certo? Vamos trabalhar nisso então.
 
-## Entregando o conteúdo do seu blog rapidamente com CloudFront
+###Entregando o Conteúdo Do Seu Blog Rapidamente Com CloudFront
 
 Ao criarmos o bucket no S3 selecionamos a região US Standard. Isso significa que nossos arquivos estão sendo hospedados nos Estados Unidos. Sempre que um leitor de seu blog acessá-lo de fora dos EUA ele vai ter um tempo de carregamento da página maior, em virtude da latência. 
 
@@ -128,7 +128,7 @@ No campo *Alternate Domain Names* coloque o domínio do seu blog das duas formas
 
 Agora se irmos no menu lateral *Distributions* e selecionarmos a distribuição recém criada, poderemos verificar que ela tem um *Domain Name*. Essa url irá devolver também a página inicial do blog, mas agora utilizando o serviço CloudFront. Mas ainda temos uma URL pouco amigável. Chegou a hora de comprarmos nosso próprio domínio.
 
-## Obtendo uma URL amigável com Route53
+###Obtendo Uma URL Amigável Com Route53
 
 Agora que já temos nossos arquivos hospedados e sendo entregues da melhor forma possível, precisamos ter uma URL amigável para que nosso blog seja encontrado facilmente pelos leitores. O primeiro passo é adquirir um domínio, que será o endereço de seu blog na web. Selecione o Route53 no console principal, *Registered Domains*, *Register Domain*. Escolha o nome do seu domínio e a extensão final da URL. Domínios .com custam $12, mas não se assuste com esse valor ele é anual. 
 
@@ -158,7 +158,8 @@ Faça o mesmo procedimento novamente, mas agora preenchendo o campo *Name* com w
 	<img src="/images/2015-02-10-hospedando-seu-blog-na-aws-por-centavos/12.png" alt="Records Sets no Route53">
 </figure>
 
-## Pronto
+###Pronto
+
 Agora basta esperar a propagação do DNS, que pode levar até 24 horas e depois começar a escrever em seu blog. Mesmo após passar o período do free trial da AWS o custo de hospedagem do blog será muito baixo. Tirando o domínio que tem um custo um pouco mais elevado, você irá gastar menos de $1 por mês. 
 
 Se interessou pelos serviços da AWS? Fique atento que virão mais posts sobre o assunto em breve. Até mais.

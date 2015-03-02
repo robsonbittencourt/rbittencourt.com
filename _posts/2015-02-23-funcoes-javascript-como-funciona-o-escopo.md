@@ -10,12 +10,13 @@ image:
 date: 2015-02-23T12:20:00-02:00
 ---
 
-#Funções
+###Funções
+
 Estou lendo o livro Segredos do [Ninja JavaScript](http://novatec.com.br/livros/ninja-javascript/), o qual recomendo fortemente a leitura, e resolvi escrever um pouco sobre o tópico que estou estudando: funções. 
 
 Funções podem ser consideradas a base da linguagem JavaScript. Por ser uma linguagem de aspecto funcional, para fazermos o bom uso de seus recursos, é imprescindível que tenhamos um bom conhecimento sobre a mecânica por trás das funções. 
 
-#Escopo
+###Escopo
 
 Apesar de ser baseada na linguagem C, JavaScript não delimita o escopo através de blocos (que iniciam e terminam com {}).
 

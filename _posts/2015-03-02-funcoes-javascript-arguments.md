@@ -7,7 +7,7 @@ excerpt:
 tags: []
 image:
   feature:
-date: 2015-02-17T18:49:52-02:00
+date: 2015-03-02T12:00:00-02:00
 ---
 
 ###Assinaturas de métodos
@@ -30,6 +30,7 @@ imprimePalavra(); //O método não é aplicável para os argumentos()
 {% endhighlight %}
 
 ###Sintaxe de Funções
+
 Porém, a linguagem JavaScript trata este assunto de maneira totalmente distinta. Antes de mostrar as diferenças, vamos ver qual é a sintaxe de declaração de uma função JavaScript.
 
 {% highlight javaScript %}
@@ -48,18 +49,20 @@ function myFunction(value1, value2) {
 - O corpo da função, com as instruções entre chaves. O corpo pode estar vazio, mas as chaves sempre devem estar presentes.
 
 ###Argumentos Variáveis
+
 Como dito anteriormente, o JavaScript trata de uma forma diferente os argumentos de uma função. Podemos invocar uma função passando qualquer número de parâmetros, não importando a assinatura da função, e nenhum erro será gerado.
 
 As seguintes regras são seguidas ao invocar uma função:
 
-- Invocar a função passando o mesmo número de argumentos que a assinatura declara: o primeiro argumento será atribuído ao primeiro parâmetro, o segundo ao segundo e assim sucessivamente.
+- **Invocar a função passando o mesmo número de argumentos que a assinatura declara:** o primeiro argumento será atribuído ao primeiro parâmetro, o segundo ao segundo e assim sucessivamente.
 
-- Invocar a função com menos parâmetros do que os informados na assinatura: a regra acima será seguida com os parâmetros informados, e os que não forem informados terão seus valores *undefined* dentro da função.
+- **Invocar a função com menos parâmetros do que os informados na assinatura:** a regra acima será seguida com os parâmetros informados, e os que não forem informados terão seus valores *undefined* dentro da função.
 
-- Invocar a função com parâmetros além dos informados na assinatura: Os atributos serão atribuídos aos parâmetros seguindo a primeira regra. Os atributos em excesso, são ignorados e não tem seus valores atribuídos a nenhum parâmetro.
+- **Invocar a função com parâmetros além dos informados na assinatura:** Os atributos serão atribuídos aos parâmetros seguindo a primeira regra. Os atributos em excesso, são ignorados e não tem seus valores atribuídos a nenhum parâmetro.
 
 ###Arguments
-No tópico anterior você deve ter se perguntado: Porque é possível passar argumentos adicionais se eles não são atribuídos a nenhum parâmetro? A resposta para isso é o parâmetro _arguments_.
+
+No tópico anterior você deve ter se perguntado: Porque é possível passar argumentos adicionais se eles não são atribuídos a nenhum parâmetro? A resposta para isso é o parâmetro ***arguments***.
 
 Toda vez que invocamos uma função, o JavaScript passa de forma implícita o argumento *arguments*. Este argumento representa uma lista que contém todos argumentos que foram passados para a função.
 
@@ -78,4 +81,4 @@ Podemos invocar a função passando um parâmetro apesar de sua assinatura não 
 
 Devemos tomar alguns cuidados ao utilizar *arguments*. Apesar de possuir um atributo *length*, ser possível recuperar seus valores com sintaxe de um array, e até iterá-lo em um laço for, *arguments* não é um array. Tentar utilizar os métodos de array resultará em erros.
 
-Por enquanto ficamos por aqui. No próximo post falarei sobre o outro parâmetro que é passado de forma implícita em todas funções, o *this*. 
+Por enquanto ficamos por aqui. No próximo post falarei sobre o outro parâmetro que é passado de forma implícita em todas funções: ***this***. 
