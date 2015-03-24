@@ -7,13 +7,13 @@ excerpt:
 tags: [javascript, funcoes]
 image:
   feature:
-date: 2015-03-29T08:30:00-03:00
+date: 2015-03-30T12:00:00-03:00
 ---
 
 ### O tal This
 Se você é um desenvolvedor de linguagens orientadas a objeto como Java e C#, já deve estar acostumado com o conceito de *this*. Nestas linguagens, *this* é o contexto de execução. Por exemplo quando executamos um método em Java, podemos utilizar referências a *this*, que equivalem ao objeto que esta realizando a invocação. Isso permite que métodos iguais retornem informações diferentes de acordo com quem faz a chamada.
 
-Chegando no mundo JavaScript, vamos perceber que o *this* é tratado de forma totalmente distinta. Aqui *this* não é determinado por quem chama a função e sim pela forma como ela é invocada. Existem quatro maneiras de invocar uma função, e vamos conhece-lás agora: *Invocação como Função*, *Invocação como Método*, *Invocação como Construtor* e *Invocação por apply/call*.
+Chegando no mundo JavaScript, vamos perceber que o *this* é tratado de forma totalmente distinta. Aqui *this* não é determinado por quem chama a função e sim pela forma como ela é invocada. Existem quatro maneiras de invocar uma função, e vamos conhece-las agora: *Invocação como Função*, *Invocação como Método*, *Invocação como Construtor* e *Invocação por apply/call*.
 
 ### Invocação como Função
 Como assim invocação como função? É óbvio que uma função é invocada como uma função, qualquer um deduziria isso. Na verdade dizemos que uma função é invocada como função quando ela não é invocada de nenhuma das outras três maneiras: método, construtor, apply/call.
@@ -36,7 +36,7 @@ depositValue();
 ### Invocação como Método
 Quando uma função é atribuída a uma propriedade de um objeto, e a invocação ocorre através desta propriedade, então a função é invocada como um método deste objeto. Aqui as coisas começam a ficar interessantes.
 
-Quando invocamos uma função como método, o contexto da função é o objeto ao qual o método pertence. Assim como em outras linguagens orientadas a objetos, o objeto utilizado para invocar a função é passado como referência implicita para a mesma, possibilitando a sua utilização dentro da função.
+Quando invocamos uma função como método, o contexto da função é o objeto ao qual o método pertence. Assim como em outras linguagens orientadas a objetos, o objeto utilizado para invocar a função é passado como referência implícita para a mesma, possibilitando a sua utilização dentro da função.
 
 {% highlight javaScript %}
 
@@ -70,7 +70,7 @@ Quando utilizamos a palavra-chave *new* três coisas acontecem:
 
 - Quando não há um valor de retorno explícito o novo objeto é retornado como valor do construtor.
 
-Como você deve ter percebido, isso faz com que nem todas funções sejam interessantes de serem invocadas utilizando *new*. Os construtores na verdade tem como objetivo criar um objeto, configurá-lo e retorná-lo. Qualquer coisa diferente disso não irá trazer resultados muito bons. Um bom exemplo da utilização dos construtores para criação de objetos:
+Como você deve ter percebido, isso faz com que nem todas funções sejam interessantes de serem invocadas utilizando *new*. Os construtores na verdade têm como objetivo criar um objeto, configurá-lo e retorná-lo. Qualquer coisa diferente disso não irá trazer resultados muito bons. Um bom exemplo da utilização dos construtores para criação de objetos:
 
 {% highlight javaScript %}
 
@@ -83,10 +83,10 @@ console.log(account1.balance);
 
 {% endhighlight %}
 
-Por ter sua função bem definida, existem padrões utilizados na nomenclatura dos construtores. Enquanto os métodos são nomeados com verbos e iniciam com a primeira letra minúsculas, os construtores recebem no nome um substântivo que indica o objeto que será construído e iniciam com uma letra maiúscula.
+Por ter sua função bem definida, existem padrões utilizados na nomenclatura dos construtores. Enquanto os métodos são nomeados com verbos e iniciam com a primeira letra minúsculas, os construtores recebem no nome um substantivo que indica o objeto que será construído e iniciam com uma letra maiúscula.
 
 ### Invocação por Apply/Call
-Até agora vimos diferentes formas de invocar funções, onde *this* é determinado de acordo com a forma escolhida. Mas e se quisessemos definir *this* da nossa forma? Sim podemos fazer isso utilizando um dos dois métodos que todas funções possuem: *apply* e *call*.
+Até agora vimos diferentes formas de invocar funções, onde *this* é determinado de acordo com a forma escolhida. Mas e se quiséssemos definir *this* da nossa forma? Sim podemos fazer isso utilizando um dos dois métodos que todas funções possuem: *apply* e *call*.
 
 Quando utilizamos estes métodos podemos definir quem será o contexto da função e ainda passar uma lista de argumentos. A diferença entre os dois é que enquanto *apply* recebe um array de argumentos, *call* recebe os mesmos diretamente na lista de argumentos. 
 
@@ -111,7 +111,7 @@ console.log(account2.balance);
 
 {% endhighlight %}
 
-Os dois métodos tem o mesmo comportamento, você pode escolher o que mais lhe fizer sentido no momento. Se possuir um array, ou os argumentos são uma coleção utilize *apply*, caso contrário utilize *call*.
+Os dois métodos possuem o mesmo comportamento, você pode escolher o que mais lhe fizer sentido no momento. Se possuir um array, ou os argumentos são uma coleção utilize *apply*, caso contrário utilize *call*.
 
 ### Recapitulando
 Como podemos observar, JavaScript fornece diversas formas de invocarmos funções, e estas formas definem quem será o contexto da função.
