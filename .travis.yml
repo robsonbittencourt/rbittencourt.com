@@ -7,10 +7,8 @@ before_install:
 
 install:
   - bundle install
-  - npm install -g grunt 
-
+  
 script:
-  - grunt
   - bundle exec jekyll build
   - s3_website push --force
 
