@@ -12,6 +12,6 @@ s3_endpoint: <%= ENV['S3_ENDPOINT'] %>
 
 s3_reduced_redundancy: true
 
-cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION_ID'] %> 
+cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION_ID'] %>
 
 cloudfront_invalidate_root: true

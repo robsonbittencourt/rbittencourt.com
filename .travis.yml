@@ -4,11 +4,14 @@ rvm:
 
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - npm install -g grunt-cli
 
 install:
   - bundle install
+  - npm install
   
 script:
+  - grunt	
   - bundle exec jekyll build
   - s3_website push --force
 
