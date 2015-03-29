@@ -4,7 +4,7 @@ title: "Funções JavaScript - Arguments"
 modified:
 categories: 
 excerpt:
-tags: []
+tags: [javascript, funcoes]
 image:
   feature:
 date: 2015-03-02T12:00:00-02:00

@@ -4,7 +4,7 @@ title: "Funções JavaScript - Como Funciona O Escopo"
 modified:
 categories: 
 excerpt:
-tags: []
+tags: [javascript, funcoes]
 image:
   feature:
 date: 2015-02-23T12:20:00-02:00

@@ -4,7 +4,7 @@ title: "Hospendando seu Blog Na AWS por Centavos"
 modified:
 categories: 
 excerpt:
-tags: []
+tags: [aws, cloud, blog, jekyll]
 image:
   feature:
 date: 2015-02-12T09:00:00-02:00
