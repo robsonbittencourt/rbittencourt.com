@@ -6,7 +6,8 @@ before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 install:
-  - bundle install  
+  - bundle install
+  -'npm install -g grunt-cli'  
 
 script:
   - grunt
