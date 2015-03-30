@@ -13,7 +13,7 @@ install:
 script:
   - grunt	
   - bundle exec jekyll build
-  - s3_website push --force
+  - s3_website push
 
 notifications:
   email: true
