@@ -4,7 +4,7 @@
 
 Código do meu blog rbittencourt.com escrito com Jekyll
 
-### Licensa
+### Licença
 
 The MIT License
 
