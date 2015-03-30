@@ -4,9 +4,11 @@
 
 Código do meu blog rbittencourt.com escrito com Jekyll
 
+### Licensa
+
 The MIT License
 
-Copyright (c) 2010-2015 Google, Inc. http://angularjs.org
+Copyright (c) 2010-2015 Robson Bittencourt
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
