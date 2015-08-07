@@ -39,8 +39,8 @@ busca por palavras que comecem com as letras informadas. Por exemplo, se você d
 
 | *Crtl+Enter* | Insere uma nova linha abaixo da atual e posiciona o cursor em seu início |
 | *Ctrl+Shift+Enter* | Insere uma nova linha acima da atual e posiciona o cursor em seu início |
-| *Ctrl+K + Ctrl+Backspace* | Apaga o contéudo da linha a esquerda do cursor |
-| *Ctrl+K + Ctrl+K* | Apaga o contéudo da linha a direita do cursor |
+| *Ctrl+K + Ctrl+Backspace* | Apaga o conteúdo da linha a esquerda do cursor |
+| *Ctrl+K + Ctrl+K* | Apaga o conteúdo da linha a direita do cursor |
 | *Ctrl+Delete* | Apaga a próxima palavra a direita |
 | *Ctrl+Backspace* | Apaga a próxima palavra a esquerda |
 | *Ctrl+K, Ctrl+U* | Converte o texto selecionado para upper case |
@@ -53,10 +53,10 @@ busca por palavras que comecem com as letras informadas. Por exemplo, se você d
 
 ###Seleção de Texto 
 
-| *Ctrl+Click do mouse* | Seleciona vários pontos para edição multipla |
+| *Ctrl+Click do mouse* | Seleciona vários pontos para edição múltipla |
 | *Ctrl+Shift+L* | Coloca um cursor de edição no final de cada linha selecionada |
 | *Ctrl+D* | Adiciona um cursor de edição no final da próxima ocorrência da palavra selecionada |
-| *Ctrl+L* | Seleciona a linha inteira. Se precionado novamente, seleciona a linha abaixo |
+| *Ctrl+L* | Seleciona a linha inteira. Se pressionado novamente, seleciona a linha abaixo |
 | *Ctrl+Shift+M* | Seleciona todo texto entre um conjunto de chaves |
 | *Ctrl+Shift+A* | Seleciona todo texto entre um conjunto de tags |
 | *Ctrl+Shift+Space* | Seleciona uma parte de um contexto. Expande o contexto se pressionado múltiplas vezes |
