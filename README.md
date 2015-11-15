@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/robsonbittencourt/rbittencourt.com.svg?branch=master)](https://travis-ci.org/robsonbittencourt/rbittencourt.com)
 
 Código do meu blog rbittencourt.com escrito com Jekyll
-
+ 
 ### Licença
 
 The MIT License
