@@ -5,7 +5,7 @@ excerpt: "So Simple is a responsive Jekyll theme for your words and images."
 modified: 2014-08-08T19:44:38.564948-04:00
 ---
 
-Meu nome é Robson Bittencourt, tenho 25 anos e nasci em Porto Alegre/RS. Trabalho na área de desenvolvimento desde 2013, mas antes disso me formei como técnico em mecânica industrial, e trabalhei em indústrias durante quase cinco anos.
+Meu nome é Robson Bittencourt, tenho 26 anos e nasci em Porto Alegre/RS. Trabalho na área de desenvolvimento desde 2013, mas antes disso me formei como técnico em mecânica industrial, e trabalhei em indústrias durante quase cinco anos.
 
 Foi neste período que surgiu a oportunidade de cursar Sistemas de Informação, curso este que concluí em 2015.
 
