@@ -27,7 +27,7 @@ System.out.println(result);
 
 {% endhighlight %}
 
-Ao recuperar valores de uma lista, sempre era necessário realizar o cast para um determinado tipo. Isso devido ao fato que a lista recebia um Object como parâmetro em seu método add. Como em Java todos os tipos extendem Obejct, qualquer tipo poderia ser inserido em uma lista. Em um primeiro momento nenhum problema. O código compila corretamente, mas se aumentarmos um pouco nosso cenário poderemos observar situações deste tipo:
+Ao recuperar valores de uma lista, sempre era necessário realizar o *cast* para um determinado tipo. Isso devido ao fato que a interface *List* recebia um *Object* como parâmetro em seu método *add*. Como em Java todos os tipos extendem *Object*, qualquer tipo poderia ser inserido em uma lista. Em um primeiro momento nenhum problema. O código compila corretamente, mas se aumentarmos um pouco nosso cenário poderemos observar situações deste tipo:
 
 {% highlight java %}
 
