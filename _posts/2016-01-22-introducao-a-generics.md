@@ -10,7 +10,7 @@ image:
 date: 2016-01-22T12:00:00-02:00
 ---
 
-Há alguns dias fiz um curso da [Pluralsight sobre Generics](https://app.pluralsight.com/library/courses/java-generics/table-of-contents). O curso é muito bom, se você tem oportunidade de faze-lo aproveite. Decidi compilar algumas das lições que aprendi, aqui no blog. Vou dividir em dois posts para não ficar muito macante. Este será uma introdução e no próximo irei apresentar algumas funcionalidades mais avançadas.
+Há alguns dias fiz um curso da [Pluralsight sobre Generics](https://app.pluralsight.com/library/courses/java-generics/table-of-contents). O curso é muito bom, se você tem oportunidade de faze-lo aproveite. Decidi compilar algumas das lições que aprendi, aqui no blog. Vou dividir em dois posts para não ficar muito maçante. Este será uma introdução e no próximo irei apresentar algumas funcionalidades mais avançadas.
 
 ### Generics
 
