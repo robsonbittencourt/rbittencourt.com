@@ -30,7 +30,6 @@ public class Cat extends Animal {}
 
 public class Dog extends Animal {}
 
-
 Cat[] cats = new Cat[2];
 		
 Animal[] animals = cats;
@@ -113,3 +112,23 @@ public void printAllSpecies(List<{%raw%}?{%endraw%} extends Animal> animals) {
 {% endhighlight %}
 
 Pronto agora temos um método que pode ser utilizado para qualquer classe filha de Animal. A sintaxe que utilizamos diz que pode-se passar no parâmetro qualquer lista onde o tipo genérico seja uma classe que extenda Animal.
+
+Você pode estar se perguntando, qual é a diferença entre utilizar o "? extends" ou o "T extends". O "?" é utilizado onde já é esperado um tipo genérico, por exemplo na interface List. Quando uma classe genérica é criada não podemos utilizar o Wildcard (?) deve-se utilizar o identificador de tipo genérico. Além disso o Wildcard é util como "sintax sugar" na assinatura de métodos.
+
+{% highlight java %}
+
+public static <T extends Animal> void printAllSpecies(List<T> animals) {
+   for (Animal animal : animals) {
+      System.out.println(animal.getSpecies());
+   }
+}
+
+// como não utilizamos o T no corpo do método podemos utilizar o Wildcard
+
+public void printAllSpecies(List<{%raw%}?{%endraw%} extends Animal> animals) {
+   for (Animal animal : animals) {
+      System.out.println(animal.getSpecies());
+   }
+}
+
+{% endhighlight %}
