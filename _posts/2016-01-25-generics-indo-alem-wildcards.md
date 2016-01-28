@@ -171,6 +171,84 @@ O *Wildcard* sozinho é um *sintaxe sugar* para <code><{%raw%}?{%endraw%} extend
 
 ### Quando utilizar cada forma?
 
+Existem recomendações que nos dizem quando utilizar cada uma das formas de *Wildcards*. **Lembrando que devemos utilizá-los somente quando o tipo concreto é muito restritivo para a lógica do método.**
+
+O *Upper Bounded* deve ser utilizado quando a variável for "de entrada" (in). Dizemos que a variável é de entrada quando ela fornece dados à um método, ou seja será lida.
+
+{% highlight java %}
+
+public void printAllSizes(List<{%raw%}?{%endraw%} extends Animal> animals) {
+   for (Animal animal : animals) {
+      Sytslem.out.println(animal.getSize());
+   }
+}
+
+{% endhighlight %}
+
+Essa regra nos dá segurança, pois como a variável <code>animals</code> será lida dentro do <code>for</code>, só é seguro aceitarmos uma instância de *Animal* ou uma de sub-classes.
+
+O *Lower Bounded* é o caso contrário. Devemos utilizá-lo quando a variável for de saída (out), ou seja, uma variável que terá dados escritos nela, para utilização posterior.
+
+{% highlight java %}
+
+public void createDefaultAnimalList(List<{%raw%}?{%endraw%} super Animal> animals) {
+   animals.add(new Dog());
+   animals.add(new Cat());
+}
+
+{% endhighlight %}
+
+Como o método adiciona objetos da classe *Animal* em uma lista, o tipo genérico da lista deve ser *Animal* ou uma de suas super-classes.
+
+O *Unbounded* é o que tem aplicação mais limitada. Sua sintaxe <code><{%raw%}?{%endraw%}></code> é um *sintaxe sugar* para <code><{%raw%}?{%endraw%} extends Object></code>.
+
+{% highlight java %}
+
+public static void printList(List<{%raw%}?{%endraw%}> list) {
+    for (Object elem: list) {
+        System.out.print(elem + " ");
+    }
+    System.out.println();
+}
+
+{% endhighlight %}
+
+Podemos utilizá-lo quando o método usa funcionalidades da classe Object no parâmetro, ou quando a implementação não depende do tipo genérico.
+
+### Erros comuns
+
+Muitas pessoas se confundem ao utilizar *Wildcards* com listas, devido ao fato de acreditarem que o tipo genérico se refere ao elementos que podem ser inseridos na mesma.
+
+É importante ressaltar que o tipo genérico define o tipo que será utilizado na classe ou método, ou seja uma vez definido ele é único. Vamos ver um exemplo utilizando o *Unbounded Wildcard*.
+
+{% highlight java %}
+
+List<{%raw%}?{%endraw%}> objects = new ArrayList<>();
+
+// não compila      
+objects.add(new Object());
+objects.add(new Dog());
+
+{% endhighlight %}
+
+Isso acontece pois <code><{%raw%}?{%endraw%}></code> é a mesma coisa que <code><{%raw%}?{%endraw%} extends Object></code>. Por isso nenhum valor pode ser inserido nesta lista (a não ser null).
+
+O exemplo também ressalta que não devemos pensar no <code><{%raw%}?{%endraw%}></code> como sendo a mesma coisa que a classe *Object*, pois com ela o mesmo exemplo seria válido.
+
+{% highlight java %}
+
+List<Object> objects = new ArrayList<>();
+
+// compila      
+objects.add(new Object());
+objects.add(new Dog());
+
+{% endhighlight %}
+
+### Conclusão
+
+Como vimos, o conhecimento sobre o uso correto dos *Wildcards* nos possibilita escrevermos códigos mais flexiveis. É um assunto um pouco complexo, alguns pontos ainda ficaram de fora deste post, por isso deixo algumas referências que utilizei que podem servir como complemento. No post anterior, havia dito que falaria sobre *Raw Types* e *Erasure*, mas como esse ficou grande, vai ter que ficar para o próximo.
+
 ### Referências
 
 [Java Fudamentals: Generic](https://app.pluralsight.com/library/courses/java-generics/table-of-contents)
@@ -180,3 +258,5 @@ O *Wildcard* sozinho é um *sintaxe sugar* para <code><{%raw%}?{%endraw%} extend
 [Documentação sobre Generics](https://docs.oracle.com/javase/tutorial/java/generics/index.html)
 
 [Guidelines for Wildcard Use](https://docs.oracle.com/javase/tutorial/java/generics/wildcardGuidelines.html)
+
+[Java Generics FAQs - Programming With Java Generics](http://www.angelikalanger.com/GenericsFAQ/FAQSections/ProgrammingIdioms.html)
