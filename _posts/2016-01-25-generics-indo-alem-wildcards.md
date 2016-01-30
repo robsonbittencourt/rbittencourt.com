@@ -48,7 +48,7 @@ animals[0] = new Dog(); //compila pois Dog é um Animal
 
 {% endhighlight %}
 
-O *array* é um tipo primitivo especial, não possue uma classe nem implementa uma interface, mas possui uma estrutura, e esta conhece o tipo que deve ser possível armazenar, por isso a exceção no exemplo foi lançada. Isso nos leva a perceber que *arrays* não são muito seguros, por isso é recomendado o uso de listas. 
+O *array* é um tipo primitivo especial, não possui uma classe nem implementa uma interface, mas possui uma estrutura, e esta conhece o tipo que deve ser possível armazenar, por isso a exceção no exemplo foi lançada. Isso nos leva a perceber que *arrays* não são muito seguros, por isso é recomendado o uso de listas. 
 
 As listas ao contrário dos *arrays* são invariantes e só poder ser atribuídas a variáveis com o mesmo tipo genérico.
 
@@ -119,7 +119,7 @@ Observando-se a sintaxe, podemos entender o porque do nome *Upper Bounded Wildca
 
 Você pode estar se perguntando, qual é a diferença entre utilizar o <code>? extends</code> ou <code>T extends</code>. O *?* é utilizado onde já é esperado um tipo genérico, por exemplo na interface List. Quando uma classe genérica é criada não podemos utilizar o *Wildcard* deve-se utilizar o identificador de tipo genérico.
 
-Também podemos utilizar em uma classe genérica que possue um método genérico com tipo diferente do da classe. Além disso, também é util como *sintax sugar* na assinatura de métodos.
+Também podemos utilizar em uma classe genérica que possui um método genérico com tipo diferente do da classe. Além disso, também é útil como *sintax sugar* na assinatura de métodos.
 
 {% highlight java %}
 
@@ -185,7 +185,7 @@ public void printAllSizes(List<{%raw%}?{%endraw%} extends Animal> animals) {
 
 {% endhighlight %}
 
-Essa regra nos dá segurança, pois como a variável <code>animals</code> será lida dentro do <code>for</code>, só é seguro aceitarmos uma instância de *Animal* ou uma de sub-classes.
+Essa regra nos dá segurança, pois como a variável <code>animals</code> será lida dentro do <code>for</code>, só é seguro aceitarmos uma instância de *Animal* ou uma de subclasses.
 
 O *Lower Bounded* é o caso contrário. Devemos utilizá-lo quando a variável for de saída (out), ou seja, uma variável que terá dados escritos nela, para utilização posterior.
 
@@ -198,7 +198,7 @@ public void createDefaultAnimalList(List<{%raw%}?{%endraw%} super Animal> animal
 
 {% endhighlight %}
 
-Como o método adiciona objetos da classe *Animal* em uma lista, o tipo genérico da lista deve ser *Animal* ou uma de suas super-classes.
+Como o método adiciona objetos da classe *Animal* em uma lista, o tipo genérico da lista deve ser *Animal* ou uma de suas superclasses.
 
 O *Unbounded* é o que tem aplicação mais limitada. Sua sintaxe <code><{%raw%}?{%endraw%}></code> é um *sintaxe sugar* para <code><{%raw%}?{%endraw%} extends Object></code>.
 
@@ -247,7 +247,7 @@ objects.add(new Dog());
 
 ### Conclusão
 
-Como vimos, o conhecimento sobre o uso correto dos *Wildcards* nos possibilita escrevermos códigos mais flexiveis. É um assunto um pouco complexo, alguns pontos ainda ficaram de fora deste post, por isso deixo algumas referências que utilizei que podem servir como complemento. No post anterior, havia dito que falaria sobre *Raw Types* e *Erasure*, mas como esse ficou grande, vai ter que ficar para o próximo.
+Como vimos, o conhecimento sobre o uso correto dos *Wildcards* nos possibilita escrevermos códigos mais flexíveis. É um assunto um pouco complexo, alguns pontos ainda ficaram de fora deste post, por isso deixo algumas referências que utilizei que podem servir como complemento. No post anterior, havia dito que falaria sobre *Raw Types* e *Erasure*, mas como esse ficou grande, vai ter que ficar para o próximo.
 
 ### Referências
 
