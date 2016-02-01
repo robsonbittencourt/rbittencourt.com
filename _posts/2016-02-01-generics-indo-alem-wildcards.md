@@ -7,7 +7,7 @@ excerpt:
 tags: [java, generics]
 image:
   feature:
-date: 2016-01-23T00:00:00-02:00
+date: 2016-02-01T12:00:00-02:00
 ---
 
 No [meu último post](http://rbittencourt.com/introducao-a-generics/) apresentei alguns conceitos básicos sobre *Generics*. Vale reforçar que o conteúdo que será apresentado aqui, foi visto no curso da [Pluralsight sobre Generics](https://app.pluralsight.com/library/courses/java-generics/table-of-contents). Não, não estou fazendo propaganda, é que o curso é bom mesmo, recomendo :)
