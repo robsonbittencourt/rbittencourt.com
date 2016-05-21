@@ -50,7 +50,7 @@ animals[0] = new Dog(); //compila pois Dog é um Animal
 
 O *array* é um tipo primitivo especial, não possui uma classe nem implementa uma interface, mas possui uma estrutura, e esta conhece o tipo que deve ser possível armazenar, por isso a exceção no exemplo foi lançada. Isso nos leva a perceber que *arrays* não são muito seguros, por isso é recomendado o uso de listas. 
 
-As listas ao contrário dos *arrays* são invariantes e só poder ser atribuídas a variáveis com o mesmo tipo genérico.
+As listas ao contrário dos *arrays* são invariantes e só podem ser atribuídas a variáveis com o mesmo tipo genérico.
 
 {% highlight java %}
 
