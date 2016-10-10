@@ -80,6 +80,8 @@ Conhece outros problemas, ou discorda de algo que eu escrevi, deixe um comentár
 
 ### Dicas e links
 
+[Download](https://code.visualstudio.com/download)
+
 [Repositório oficial](https://github.com/Microsoft/vscode)
 
 [VS Code Tips and Tricks](https://github.com/Microsoft/vscode-tips-and-tricks)
