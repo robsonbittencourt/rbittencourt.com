@@ -5,7 +5,7 @@ locale: pt_BR
 description: De tudo um pouco sobre o mundo do desenvolvimento de software.
 logo:
 search: true
-url: http://rbittencourt.com/
+url:
 comments: true
 share: true
 
