@@ -7,7 +7,7 @@ excerpt:
 tags: [travis-ci, integração-continua, ferramentas]
 image:
   feature:
-date: 2017-03-06T12:00:00-02:00
+date: 2017-03-13T12:00:00-02:00
 ---
 
 Irei começar uma série de três posts mostrando algumas ferramentas gratuitas que temos disponíveis para projetos open-source. Este post irá mostrar a ferramenta de integração contínua Travis CI. Os próximos dois serão sobre qualidade de código e deploy de aplicações.
@@ -25,7 +25,7 @@ Mas e quanto custa tudo isso? Nada para projetos open-source, totalmente de gra�
 Criar uma conta no Travic CI é muito fácil. Use seu próprio acesso do Github, dê as permissões necessárias e pronto, todos seus projetos já estarão aparecendo na listagem.
 
 <figure>
-	<img src="/images/2017-03-06-travis/1.png" alt="Lista de projetos no Travis">
+	<img src="/images/2017-03-13-travis/1.png" alt="Lista de projetos no Travis">
 </figure>
 
 Caso algum não esteja é só clicar em Sync account que ele irá sincronizar novamente com o Github. Escolha um projeto que você deseja habilitar o build e ligue o botão correspondente.
@@ -33,7 +33,7 @@ Caso algum não esteja é só clicar em Sync account que ele irá sincronizar no
 Ao clicar na engrenagem do projeto, a tela de configurações é aberta. Aqui você pode realizar algumas configurações, como por exemplo, se todos os commits devem gerar um commit ou somente pull requests. Além disso é nesta tela que podemos criar variáveis de ambiente para utilizar nos builds. Entrarei em mais detalhes em um próximo post quando precisarmos. A princípio as configurações padrão são suficientes para prosseguirmos.
 
 <figure>
-	<img src="/images/2017-03-06-travis/2.png" alt="Tela de configurações">
+	<img src="/images/2017-03-13-travis/2.png" alt="Tela de configurações">
 </figure>
 
 ## O arquivo .travis.yml
@@ -65,7 +65,7 @@ Porém notem que tudo é muito declarativo e simples. Existem diversas opções 
 Agora que temos o arquivo basta fazer o commit dele no repositório e o Travis irá identificar a mudança e iniciar o build automaticamente. 
 
 <figure>
-	<img src="/images/2017-03-06-travis/3.png" alt="Tela mostrando a saída do build">
+	<img src="/images/2017-03-13-travis/3.png" alt="Tela mostrando a saída do build">
 </figure>
 
 
