@@ -10,11 +10,11 @@ image:
 date: 2017-03-06T12:00:00-02:00
 ---
 
-Irei começar uma série de três posts mostrando algumas ferramentas gratuítas que temos disponíveis para projetos open-source. Este post irá mostrar a ferramenta de integração contínua Travis CI. Os próximos dois serão sobre qualidade de código e deploy de aplicações.
+Irei começar uma série de três posts mostrando algumas ferramentas gratuitas que temos disponíveis para projetos open-source. Este post irá mostrar a ferramenta de integração contínua Travis CI. Os próximos dois serão sobre qualidade de código e deploy de aplicações.
 
 ##Travis CI
 
-Travis CI (daqui para frente chamada de Travis) é um serviço muito interessante que possibilita executarmos tasks como build, testes e deploy nossas aplicações. Na verdade ele não se limita a isso, é possível criar scripts para fazer qualquer coisa que seria possível em um script bash.
+Travis CI (daqui para frente chamado de apensas Travis) é um serviço muito interessante que possibilita executarmos tasks como build, testes e deploy nossas aplicações. Na verdade ele não se limita a isso, é possível criar scripts para fazer qualquer coisa que seria possível em um script bash.
 
 Além disso ele se integra com o seu código no GitHub. Uma vez configurado, a cada commit um build é disparado pelo Travis de forma automática. Este processo de execução do build e testes a cada commit é conhecido como Integração Contínua. Não escrevi sobre ainda aqui no blog, mas você pode dar uma conferida [neste post da Caelum](http://blog.caelum.com.br/integracao-continua/).
 
@@ -30,7 +30,7 @@ Criar uma conta no Travic CI é muito fácil. Use seu próprio acesso do Github,
 
 Caso algum não esteja é só clicar em Sync account que ele irá sincronizar novamente com o Github. Escolha um projeto que você deseja habilitar o build e ligue o botão correspondente.
 
-Ao clicar na engrenagem do projeto, a tela de configurações é aberta. Aqui você pode realizar algumas configurações, como por exemplo, todos os commits devem gerar um commit ou somente pull requests. Além disso é nesta tela que podemos criar variáveis de ambiente para utilizar nos builds. Entrarei em mais detalhes em um próximo post quando precisarmos. A princípio as configurações padrão são suficientes para prosseguirmos.
+Ao clicar na engrenagem do projeto, a tela de configurações é aberta. Aqui você pode realizar algumas configurações, como por exemplo, se todos os commits devem gerar um commit ou somente pull requests. Além disso é nesta tela que podemos criar variáveis de ambiente para utilizar nos builds. Entrarei em mais detalhes em um próximo post quando precisarmos. A princípio as configurações padrão são suficientes para prosseguirmos.
 
 <figure>
 	<img src="/images/2017-03-06-travis/2.png" alt="Tela de configurações">
@@ -69,10 +69,10 @@ Agora que temos o arquivo basta fazer o commit dele no repositório e o Travis i
 </figure>
 
 
-Caso nosso build tivesse falhado, um email teria sido enviado notificando. Um ponto interessante, é que o build sempre é executado em um ambiente isolado utilizando um container Docker. Dessa forma podemos ter a garantia que o ambiente de build sempre é identico e que não guarda nenhum tipo de estado. 
+Caso nosso build tivesse falhado, um e-mail teria sido enviado notificando. Um ponto interessante, é que o build sempre é executado em um ambiente isolado utilizando um container Docker. Dessa forma podemos ter a garantia que o ambiente de build sempre é idêntico e que não guarda nenhum tipo de estado. 
 
 ## Concluindo
-Travis é uma ótima ferramenta para utilizarmos em nossos projetos open-source. Ele trás mais garantia e segurança para o nosso projeto, fornecendo feedback frequente sobre o estado do projeto. Esse feedback pode ser inclusive exibido para outras pessoas através de uma badge com o status do build. Se você clicar nela, já será exibido um link para que você cole no README do seu projeto, mostrando o status do seu projeto para o mundo. 
+Travis é uma ótima ferramenta para utilizarmos em nossos projetos open-source. Ele traz mais garantia e segurança para o nosso projeto, fornecendo feedback frequente sobre o estado do projeto. Esse feedback pode ser inclusive exibido para outras pessoas através de uma badge com o status do build. Se você clicar nela, já será exibido um link para que você cole no README do seu projeto, mostrando o status do seu projeto para o mundo. 
 
 Na sequência estarei mostrando mais algumas ferramentas e voltaremos a incrementar nosso build com o Travis. O código completo pode ser encontrado [nesta demo no GitHub](https://github.com/robsonbittencourt/app-tools-examples)
 
