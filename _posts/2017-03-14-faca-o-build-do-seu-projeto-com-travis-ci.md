@@ -16,7 +16,7 @@ Irei começar uma série de três posts mostrando algumas ferramentas gratuitas 
 
 Travis CI (daqui para frente chamado de apensas Travis) é um serviço muito interessante que possibilita executarmos tasks como build, testes e deploy nossas aplicações. Na verdade ele não se limita a isso, é possível criar scripts para fazer qualquer coisa que seria possível em um script bash.
 
-Além disso ele se integra com o seu código no GitHub. Uma vez configurado, a cada commit um build é disparado pelo Travis de forma automática. Este processo de execução do build e testes a cada commit é conhecido como Integração Contínua. Não escrevi sobre ainda aqui no blog, mas você pode dar uma conferida [neste post da Caelum](http://blog.caelum.com.br/integracao-continua/).
+Além disso ele se integra com o seu código no GitHub. Uma vez configurado, a cada commit um build é disparado pelo Travis de forma automática. Este processo de execução do build e testes a cada commit é conhecido como Integração Contínua. Não escrevi sobre isso ainda, mas você pode dar uma conferida [neste post da Caelum](http://blog.caelum.com.br/integracao-continua/).
 
 Mas e quanto custa tudo isso? Nada para projetos open-source, totalmente de graça. Segundo o site: *"Testing your open source project is 10000% free. Seriously. Always. We like to think of it as our way of giving back to a community that gives us so much as well."* Se você ou sua empresa possui projetos fechados, eles oferecem serviços pagos e a privacidade necessária.
 
