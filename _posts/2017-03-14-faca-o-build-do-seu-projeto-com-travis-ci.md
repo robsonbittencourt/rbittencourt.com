@@ -7,7 +7,7 @@ excerpt:
 tags: [travis-ci, integração-continua, ferramentas]
 image:
   feature:
-date: 2017-03-13T12:00:00-02:00
+date: 2017-03-14T12:00:00-02:00
 ---
 
 Irei começar uma série de três posts mostrando algumas ferramentas gratuitas que temos disponíveis para projetos open-source. Este post irá mostrar a ferramenta de integração contínua Travis CI. Os próximos dois serão sobre qualidade de código e deploy de aplicações.
